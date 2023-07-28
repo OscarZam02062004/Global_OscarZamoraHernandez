@@ -1,26 +1,278 @@
 #Datosestaticos
-def listarProductos():
-    print("Marcas del vehiculo")
-    print("--------------------")
-    print("1.BMW Group")
-    print("2. General Motors")
-    print("3. Honda")
-    print("4. Hyundai Motor Company")
-    print("5. Mazda")
-    print("6. Nissan")
-    print("7. Pagani")
-    print("8. Ferrari")
-    print("9. Lamborgini")
-    print("10. Audi")
-    print("11. Infiniti")
-    print("12. Renault")
-    print("13. Alfa Romeo")
-    print("14. Acura")
-    print("15. Aston Martin")
-    print("16. Bentley")
-    print("17. Cadillac")
-    print("18. Lamborgini")
-    print("19. Lamborgini")
-    print("20. Lamborgini")
+listarCarros=["BMW Group",
+    "General Motors",
+    "Honda",
+    "Hyundai Motor Company",
+    "Mazda",
+    "Nissan",
+    "Pagani",
+    "Ferrari",
+    "Lamborgini",
+    "Audi",
+    "Infiniti",
+    "Renault",
+    "Alfa Romeo",
+    "Acura",
+    "Aston Martin",
+    "Bentley",
+    "Cadillac",
+    "Chevrolet",
+    "Toyota",
+    "Jeep" ]
+def listarCarrosGenerales():
+    for i in range(len(listarCarros)):
+        print(f"{i+1}. {listarCarros[i]}")
+    elegido=int(input("Que marca de vehiculo vas a escojer: "))
+    print(f"Elegiste la marca: {listarCarros[elegido-1]}")
+    print("Buena opcion")
+"""def listarColores():
+    ("1 Azul")
+    ("2 Verde")
+    ("3 Rojo")
+    ("4 Morado")
+    ("5 Amarillo")
+    ("6 Dorado")
+    ("7 Platado")
+    ("8 Rosa")
+    ("9 Tornasol")
+    ("10 Negro")
+def Vendedores():0
+    ("1 Ximena")
+    ("2 Adriana")
+    ("3 Alfredo")
+    ("4 Choco")
+    ("5 Carlos")
+    ("6 Javier")
+    ("7 Yeiden")
+    ("8 Axel")
+    ("9 Yoshi")
+    ("10 Kevin")"""
+listaUsuarios=[
+"Alicia",
+"Pedro",
+"Pablo",
+"Karla", 
+"Alfonso",
+"Axel",
+"Galicia",
+"Monserrat",
+"Armenta",
+"Oscar",
+"Omar",
+"Juan",
+"Ruben",
+"Sayde",
+"Leticia",
+"Tavo",
+"Danae",
+"Danna",
+"Coreya",
+"Rosita",
+"Panchito",
+"Margarita",
+"Maggy",
+"Aimee",
+"Anahi",
+"Edward",
+"Josue",
+"Erick",
+"Lemus",
+"Ivan",
+"Mauricio",
+"Neydy",
+"Alexandra",
+"Aleydy",
+"Berenice",
+"Joel",
+"Karime",
+"Rodolfo",
+"Hugo",
+"Anaid",
+"Rogelio",
+"Ariel",
+"Paty",
+"Selena",
+"Valentin",
+"Noe",
+"Paula",
+"Uriel",
+"Ismael",
+"Mundo",
+"Anita",
+"Julian",
+"Citlali",
+"Edgar",
+"Kain",
+"Sofia",
+"Joana",
+"Jazmin",
+"Yarazet",
+"Belen",
+"Julio",
+"Gaspar",
+"Maria",
+"Camila",
+"Brayan",
+"Cristian",
+"Alonso",
+"Alejandra",
+"Beyda",
+"Alejandro",
+]
+listaCorreos=[
+"Alicia@gmailcom",
+"Pedro@gmailcom",
+"Pablo@gmailcom",
+"Karla@gmailcom", 
+"Alfonso@gmailcom",
+"Axel@gmailcom",
+"Galicia@gmailcom",
+"Monserrat@gmailcom",
+"Armenta@gmailcom",
+"Oscar@gmailcom",
+"Omar@gmailcom",
+"Juan@gmailcom",
+"Ruben@gmailcom",
+"Sayde@gmailcom",
+"Leticia@gmailcom",
+"Tavo@gmailcom",
+"Danae@gmailcom",
+"Danna@gmailcom",
+"Coreya@gmailcom",
+"Rosita@gmailcom",
+"Panchito@gmailcom",
+"Margarita@gmailcom",
+"Maggy@gmailcom",
+"Aimee@gmailcom",
+"Anahi@gmailcom",
+"Edward@gmailcom",
+"Josue@gmailcom",
+"Erick@gmailcom",
+"Lemus@gmailcom",
+"Ivan@gmailcom",
+"Mauricio@gmailcom",
+"Neydy@gmailcom",
+"Alexandra@gmailcom",
+"Aleydy@gmailcom",
+"Berenice@gmailcom",
+"Joel@gmailcom",
+"Karime@gmailcom",
+"Rodolfo@gmailcom",
+"Hugo@gmailcom",
+"Anaid@gmailcom",
+"Rogelio@gmailcom",
+"Ariel@gmailcom",
+"Paty@gmailcom",
+"Selena@gmailcom",
+"Valentin@gmailcom",
+"Noe@gmailcom",
+"Paula@gmailcom",
+"Uriel@gmailcom",
+"Ismael@gmailcom",
+"Mundo@gmailcom",
+"Anita@gmailcom",
+"Julian@gmailcom",
+"Citlali@gmailcom",
+"Edgar@gmailcom",
+"Kain@gmailcom",
+"Sofia@gmailcom",
+"Joana@gmailcom",
+"Jazmin@gmailcom",
+"Yarazet@gmailcom",
+"Belen@gmailcom",
+"Julio@gmailcom",
+"Gaspar@gmailcom",
+"Maria@gmailcom",
+"Camila@gmailcom",
+"Brayan@gmailcom",
+"Cristian@gmailcom",
+"Alonso@gmailcom",
+"Alejandra@gmailcom",
+"Beyda@gmailcom",
+"Alejandro@gmailcom",
+]
+    
+listaPrecios=[
+"100,000",
+"90,000",
+"250,000",
+"300,000",
+"70,000",
+"150,000",
+"260,000",
+"800,000",
+"420,000",
+"950,000",
+"95,000",
+"450,000",
+"870,000",
+"600,000",
+"990,000",
+"840,000",
+"780,000",
+"650,000",
+"320,000",
+"60,000",
+"900,000",
+"1,000,000",
+"5,000,000",
+"150,000",
+"750,000",
+"390,000",
+"845,000",
+"900,000",
+"560,000",
+"410,000",
+"604,000",
+"910,000",
+"5,000,000",
+"100,000,000",
+"162,000",
+"951,000",
+"450,000",
+"741,000",
+"621,000",
+"145,000",
+"50,000",
+"60,000",
+"122,000",
+"850,000",
+"740,000",
+"360,000",
+"520,000",
+"450,000",
+"960,000",
+"520,000",
+"960,000",
+"710,000",
+"120,000",
+"250,000",
+"205,000",
+"958,000",
+"310,000,000",
+"630,000",
+"850,000",
+"710,000",
+"450,000",
+"900,200",
+"651,000",
+"750,000",
+"860,000",
+"450,000",
+"120,000",
+"450,000",
+"200,000",
+"980,000",
+]
+
+def Usuarios():
+    print('{:<10} {:<20} {:<25} {:>15}'.format("|No|","|Usuario|", "|Correo|", "|Sueldo Mensual|"))
+    for i in range(len(listaUsuarios)):
+        print('{:<10} {:<20} {:<25} {:<15}'.format(i+1,listaUsuarios[i],listaCorreos[i],  listaPrecios[i]))
+    elegirusuario=int(input("Que usuario vas a escoger: "))
+    print(f"Elegiste el usuario {listaUsuarios[elegirusuario-1]}")
+    
+ 
+
  
 
