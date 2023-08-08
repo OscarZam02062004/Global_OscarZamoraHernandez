@@ -5,7 +5,7 @@ import locale
 locale.setlocale(locale.LC_ALL,'')
 ruta="C:/Users/zamor/OneDrive/Escritorio/ModularidadPython/Prueba funciones/"
 nombreQR= ruta+ "miQR.png"#----QR----
-def generarPDF(listaNombres,listaEdades):
+def generarPDF(listaUsuarios,listaPrecios):
     fecha_actual=datetime.datetime.now()
     nombreArchivo=ruta+"reporteGlobal"+fecha_actual.strftime('%d-%m-%Y-%H-%M-%S')+".pdf"
     generarQR(nombreQR,"Hola desde funcion")#----QR----
@@ -14,11 +14,11 @@ def generarPDF(listaNombres,listaEdades):
     yInicial= 700
     c.drawString(xInicial,yInicial,"Edad")
     c.drawString(xInicial+120,yInicial,"Nombre")
-    for i in range(len(listaNombres)):
+    for i in range(len(listaUsuarios)):
         c.setFont('Helvetica',13)
         yInicial=yInicial-20
-        c.drawString(xInicial,yInicial,listaEdades[i])
-        c.drawString(xInicial+120,yInicial,listaNombres[i])
+        c.drawString(xInicial,yInicial,listaPrecios[i])
+        c.drawString(xInicial+120,yInicial,listaUsuarios[i])
         c.drawImage(nombreQR,200,400,100,100)#----QR----
         yInicial= yInicial-20
     c.save()

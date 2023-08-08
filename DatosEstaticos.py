@@ -1,4 +1,5 @@
 #Datosestaticos
+listaCarrosElegidos = []
 listarCarros=["BMW Group",
     "General Motors",
     "Honda",
@@ -24,29 +25,57 @@ def listarCarrosGenerales():
         print(f"{i+1}. {listarCarros[i]}")
     elegido=int(input("Que marca de vehiculo vas a escojer: "))
     print(f"Elegiste la marca: {listarCarros[elegido-1]}")
+    #listaMarcasElegidas.append(listarCarros[elegido-1])
     print("Buena opcion")
-"""def listarColores():
-    ("1 Azul")
-    ("2 Verde")
-    ("3 Rojo")
-    ("4 Morado")
-    ("5 Amarillo")
-    ("6 Dorado")
-    ("7 Platado")
-    ("8 Rosa")
-    ("9 Tornasol")
-    ("10 Negro")
-def Vendedores():0
-    ("1 Ximena")
-    ("2 Adriana")
-    ("3 Alfredo")
-    ("4 Choco")
-    ("5 Carlos")
-    ("6 Javier")
-    ("7 Yeiden")
-    ("8 Axel")
-    ("9 Yoshi")
-    ("10 Kevin")"""
+Colores=[
+    "Azul",
+    "Verde",
+    "Rojo",
+    "Morado",
+    "Amarillo",
+    "Dorado",
+    "Platado",
+    "Rosa",
+    "Tornasol",
+    "Negro",
+        ]
+def listarColores():
+    for i in range(len(Colores)):
+        print(f"{i+1}.{Colores[i]}")
+    elegirColor=int(input("Que Color vas a querer para exteriores: "))
+    print("----Datos guardados----")
+ColorInteriores=[
+    "Azul",
+    "Rojo",
+    "Negro",
+    "Blanco",
+]
+def listarColoresInteriores():
+    for i in range(len(ColorInteriores)):
+        print(f"{i+1}.{ColorInteriores[i]}")
+    elegirColorInt=int(input("Que Color vas a querer para interiores: "))
+    print("----Datos guardados----")
+Transmicion=[
+    "Manual",
+    "Automatico",
+    ]
+def tipoTransmicion():
+    for i in range(len(Transmicion)):
+        print(f"{i+1}.{Transmicion[i]}")
+    elegirtransmicion=int(input("Tipo de transmicion que desea? "))
+    print("--Datos Guardados--")
+
+Rines=[
+"Acero",
+"Magnesio",
+"Aleacion",
+]
+def tiposRines():
+    for i in range(len(Rines)):
+        print(f"{i+1}.{Rines[i]}")
+    elegirRines=int(input("Tipos de rines que deseas? "))
+    print("--Datos Guardados--")
+    #listaCarrosElegidos.append(listaMarcas, lista)
 listaUsuarios=[
 "Alicia",
 "Pedro",
@@ -266,13 +295,31 @@ listaPrecios=[
 ]
 
 def Usuarios():
-    print('{:<10} {:<20} {:<25} {:>15}'.format("|No|","|Usuario|", "|Correo|", "|Sueldo Mensual|"))
+    print('{:<10} {:<20} {:<25} {:>15}'.format("|No|","|Usuario|","|Correo|","|Sueldo Mensual|"))
     for i in range(len(listaUsuarios)):
         print('{:<10} {:<20} {:<25} {:<15}'.format(i+1,listaUsuarios[i],listaCorreos[i],  listaPrecios[i]))
     elegirusuario=int(input("Que usuario vas a escoger: "))
     print(f"Elegiste el usuario {listaUsuarios[elegirusuario-1]}")
-    
- 
 
+ 
+listaVendedores=[
+     "Ximena",
+    "Adriana",
+    "Alfredo",
+    "Choco",
+    "Carlos",
+    "Javier",
+    "Yeiden",
+    "Axel",
+    "Yoshi",
+    "Kevin",]
+def Vendedores():
+    for i in range(len(listaVendedores)):
+        print(f"{i+1}.{listaVendedores[i]}")
+    elegirvendedor=int(input("Que vendedor vas a escoger: "))
+    print(f"Tu vendedor personal sera: {listaVendedores[elegirvendedor-1]}")
+    
+    
+    
  
 
