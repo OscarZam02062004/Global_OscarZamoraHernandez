@@ -3,14 +3,16 @@ from FuncionQR import *#----QR----
 import datetime
 import locale
 locale.setlocale(locale.LC_ALL,'')
-ruta="C:/Users/zamor/OneDrive/Escritorio/ModularidadPython/Prueba funciones/"
-nombreQR= ruta+ "miQR.png"#----QR----
+
 def generarPDF(listaUsuarios,listaPrecios):
+    ruta="C:/Users/zamor/OneDrive/Escritorio/ModularidadPython/Prueba_funciones/"
+    nombreQR= ruta+ "ejemploQR.png"#----QR----
     fecha_actual=datetime.datetime.now()
     nombreArchivo=ruta+"reporteGlobal"+fecha_actual.strftime('%d-%m-%Y-%H-%M-%S')+".pdf"
     ahora=datetime.datetime.now()
     fecha=ahora.strftime("%Y-%m-%d %H:%M:%S")
-    generarQR=(nombreQR,"Hola desde funcion")#----QR----
+    print("ENtro al qr")
+    generarQR(nombreQR,"Hola desde funcion")#----QR----
     c = canvas.Canvas(nombreArchivo)
     xInicial= 200
     yInicial= 700

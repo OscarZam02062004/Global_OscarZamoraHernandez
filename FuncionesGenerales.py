@@ -6,8 +6,8 @@ import sys
 print("Bienvenidos a la concecionaria Dacia")
 print("---------------")
 def menu():
-    opcion=1
-    while(opcion!=0):
+    opcion="1"
+    while(opcion!="9"):
         print("1. Usuario existente")
         print("2. Nuevo usuario")
         print("3. Vendedor que te va entender")
@@ -20,41 +20,26 @@ def menu():
         opcion = input("Elige una opcion ")
         os.system('cls')
         if(opcion=="1"):
-            #Usuarios()
-            Personalizacion_Usuario()
+            Usuarios()
         elif(opcion=="2"):
             pedirDatos()
         elif(opcion=="3"):
             Vendedores()
             input("Presiona Enter para continuar...")
             os.system('cls')
-            listarCarrosGenerales()
-            input("Presiona Enter para continuar...")
-            os.system('cls')
-            print("Bienvenido a la personalizacion de tu vehiculo")
-            print("-------------------------------------")
-            listarColores()
-            input("Presiona Enter para continuar...")
-            os.system('cls')
-            listarColoresInteriores()
-            input("Presiona Enter para continuar...")
-            os.system('cls')
-            tipoTransmicion()
-            input("Presiona Enter para continuar...")
-            os.system('cls')
-            tiposRines()
-            input("Presiona Enter para continuar...")
-            os.system('cls')
+            Personalizacion_Usuario()
         elif (opcion=="4"):
             Impresion_Usuarios_Existentes()
         elif (opcion=="5"):
-            generarPDF(listaUsuarios,listaPrecios)
+            generarPDF(listaUsuarios,listaSueldos)
         elif (opcion=="6"):
             generarQR()
         elif(opcion=="7"):
             Garantia()
         elif(opcion=="8"):
             Pago()
+        elif(opcion=="9"):
+            print("llegale")
         else:
             print("Opcion no valida")
 
@@ -64,7 +49,7 @@ def menu():
 def pedirDatos():
     listaUsuarios.append(input("Ingresa el nombre del usuario:"))
     listaCorreos.append(input("Ingresa un correo electronico:"))
-    listaPrecios.append(str(input("Ingresa tu sueldo mensual: ")))
+    listaSueldos.append(str(input("Ingresa tu sueldo mensual: ")))
     print("-----------Guardado-------")
 
 def Garantia():
