@@ -1,5 +1,6 @@
 #Datosestaticos
 import os
+
 listarCarros=["BMW Group",
     "General Motors",
     "Honda",
@@ -43,11 +44,6 @@ lista_precios_carros=[
     "78,152"
 ]
 
-def listarCarrosGenerales():
-    print('{:<10} {:<25} {:<45}'.format("|No.|","|Modelo de Carros|","|Precios|"))
-    for i in range(len(listarCarros)):
-        print('{:<10} {:<25} {:<45}'.format(i+1,listarCarros[i],lista_precios_carros[i]))
-
 Colores=[
     "Azul",
     "Verde",
@@ -55,17 +51,10 @@ Colores=[
     "Morado",
     "Amarillo",
     "Dorado",
-    "Platado",
+    "Plateado",
     "Rosa",
     "Tornasol",
     "Negro",]
-
-def listarColores():
-    for i in range(len(Colores)):
-        print(f"{i+1}.{Colores[i]}")
-    """elegirColor=int(input("Que Color vas a querer para exteriores: "))
-    print(f"Tu color exterior sera: {Colores[elegirColor-1]}")"""
-
 
 ColorInteriores=[
     "Azul",
@@ -73,34 +62,15 @@ ColorInteriores=[
     "Negro",
     "Blanco",]
 
-def listarColoresInteriores():
-    for i in range(len(ColorInteriores)):
-        print(f"{i+1}.{ColorInteriores[i]}")
-    """elegirColorInt=int(input("Que Color vas a querer para interiores: "))
-    print(f"Tu color interior sera :{ColorInteriores[elegirColorInt-1]}")"""
-
 Transmicion=[
     "Manual",
     "Automatico",
     ]
-def tipoTransmicion():
-    for i in range(len(Transmicion)):
-        print(f"{i+1}.{Transmicion[i]}")
-    """elegirtransmicion=int(input("Tipo de transmicion que desea? "))
-    print(f"Tu transmicion es:{Transmicion[elegirtransmicion-1]}")"""
-
 
 Rines=[
 "Acero",
 "Magnesio",
-"Aleacion",]
-
-def tiposRines():
-    for i in range(len(Rines)):
-        print(f"{i+1}.{Rines[i]}")
-    """elegirRines=int(input("Tipos de rines que deseas? "))
-    print(f"Tu rin sera:{Rines[elegirRines-1]}")"""
-
+"Aleacion"]
 
 listaUsuarios=["Alicia",
     "Pedro",
@@ -318,18 +288,6 @@ listaSueldos=["5,000",
     "80,000",
 ]
 
-def Usuarios():
-    print('{:<10} {:<20} {:<25} {:>15}'.format("|No|","|Usuario|","|Correo|","|Sueldo Mensual|"))
-    for i in range(len(listaUsuarios)):
-        print('{:<10} {:<20} {:<25} {:<15}'.format(i+1,listaUsuarios[i],listaCorreos[i],  listaSueldos[i]))
-    elegirusuario=int(input("Que usuario vas a escoger: "))
-    print(f"Elegiste el usuario {listaUsuarios[elegirusuario-1]}")
-
-def Impresion_Usuarios_Existentes():
-    print('{:<10} {:<20} {:<25} {:>15}'.format("|No|","|Usuario|","|Correo|","|Sueldo Mensual|"))
-    for i in range(len(listaUsuarios)):
-        print('{:<10} {:<20} {:<25} {:<15}'.format(i+1,listaUsuarios[i],listaCorreos[i],  listaSueldos[i]))
-    print("----------Impresion de Datos Exitoso---------")
 listaVendedores=["Ximena",
     "Adriana",
     "Alfredo",
@@ -341,91 +299,53 @@ listaVendedores=["Ximena",
     "Yoshi",
     "Kevin",]
 
-def Vendedores():
-    for i in range(len(listaVendedores)):
-        print(f"{i+1}.{listaVendedores[i]}")
-    elegirvendedor=int(input("Que vendedor vas a escoger: "))
-    print(f"Tu vendedor personal sera: {listaVendedores[elegirvendedor-1]}")
-
 registro_carros=[
     ["BMW","Acero","Rojo","Negro","Manual"],
-    "General Motors",
-    "Honda",
-    "Hyundai Motor Company",
-    "Mazda",
-    "Nissan",
-    "Pagani",
-    "Ferrari",
-    "Lamborgini",
-    "Audi",
-    "Infiniti",
-    "Renault",
-    "Alfa Romeo",
-    "Acura",
-    "Aston Martin",
-    "Bentley",
-    "Cadillac",
-    "Chevrolet",
-    "Toyota",
-    "Jeep",
-    "Azul",
-    "Verde",
-    "Rojo",
-    "Morado",
-    "Amarillo",
-    "Dorado",
-    "Platado",
-    "Rosa",
-    "Tornasol",
-    "Negro",
-    "Manual",
-    "Automatico",
-    "Acero",
-    "Magnesio",
-    "Aleacion",
+    ["General Motors","Magnesio","Verde","Azul","Automatico"],
+    ["Honda","Aleacion","Morado","Amarillo","Manual"],
+    ["Hyundai Motor Company","Acero","Dorado","Plateado","Manual"],
+    ["Mazda","Magnesio","Rosa","Tornasol","Manual"],
+    ["Nissan","Aleacion","Negro","Blanco","Manual"],
+    ["Pagani","Acero","Azul","Rojo","Manual"],
+    ["Ferrari","Magnesio","Negro","Blanco","Manual"],
+    ["Lamborgini","Aleacion","Morado","Amarillo","Manual"],
+    ["Audi","Acero","Dorado","Plateado","Manual"],
+    ["Infiniti","Magnesio","Rosa","Tornasol","Manual"],
+    ["Renault","Aleacion","Azul","Rojo","Manual"],
+    ["Alfa Romeo","Acero","Dorado","Plateado","Manual"],
+    ["Acura","Magnesio","Negro","Blanco","Manual"],
+    ["Aston Martin","Aleacion","Morado","Amarillo","Manual"],
+    ["Bentley","Acero","Verde","Azul","Manual"],
+    ["Cadillac","Magnesio","Rojo","Negro","Manual"],
+    ["Chevrolet","Aleacion","Verde","Azul","Manual"],
+    ["Toyota","Acero","Morado","Amarillo","Manual"],
+    ["Jeep","Magnesio","Dorado","Plateado","Manual"],
 ]
-def Personalizacion_Usuario(): 
-    listarCarrosGenerales()
-    marca=int(input("Ingrese la marca del carro: "))
-    input("Presiona Enter para continuar...")
-    os.system('cls')
+#------------Estructura de la pila
+class Stack:
+    def __init__(self):
+        self.items = []
 
-    tiposRines()
-    Rines=input("Ingresa el tipo de rin que desees: ")
-    input("Presiona Enter para continuar...")
-    os.system('cls')
+    def push(self, item):
+        self.items.append(item)
 
-    print("Colores disponibles")
-    for i in range(len(Colores)):
-        print(f"{i+1}.{Colores[i]}")
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            return None
 
-    color_elegido=int(input("Ingrese el numero del color exterior del vehiculo: "))
-    color_exterior=Colores[color_elegido-1]
-    #input("Presiona Enter para continuar...")
-    #os.system('cls')
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        else:
+            return None
 
+    def is_empty(self):
+        return len(self.items) == 0
 
-    color_elegido=int(input("Ingresa el numero del color interior del vehiculo: "))
-    color_interior=Colores[color_elegido-1]
-    input("Presiona Enter para continuar...")
-    os.system('cls')
-
-    tipoTransmicion()
-    Transmicion=input("Ingresa el tipo de transmicion que deseas: ")
-  
-
-    Personalizacion_Final=[listarCarros[marca-1],Rines,color_exterior,color_interior,Transmicion]
-
-    registro_carros.append(Personalizacion_Final)
-    print("La impresion de datos de la personalizacion del carro es: ")
-    print("|Marca|     |Rin|   |Color exterior|   |Color interior|    |Transmicion|")
-    for i in range(len(registro_carros)):
-        print(f"Todo: {registro_carros}")
-        print(f"Solo i {registro_carros[i]}")
-       # print(f"{registro_carros[i][0]}--{registro_carros[i][1]}--{registro_carros[i][2]}--{registro_carros[i][3]}--{registro_carros[i][4]}--{registro_carros[i][5]}")
-
-
-
-
- 
-
+    def size(self):
+        return len(self.items)
+    
+    def display(self):
+        return self.items
